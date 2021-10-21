@@ -1,0 +1,76 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "testsp1",
+    "description": "",
+    "version": "1.0"
+  },
+  "host": "graph.microsoft.com",
+  "basePath": "/",
+  "schemes": [
+    "https"
+  ],
+  "consumes": [],
+  "produces": [],
+  "paths": {
+    "/v1.0/sites/bc05d7b7-1e0e-4482-a9f1-f8b3e4b6b24e/lists/a2b1c0c0-f02e-400b-93f7-42b7e2705afe/items": {
+      "post": {
+        "responses": {
+          "default": {
+            "description": "default",
+            "schema": {}
+          }
+        },
+        "operationId": "4",
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": false,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "fields": {
+                  "type": "object",
+                  "properties": {
+                    "Title": {
+                      "type": "string",
+                      "description": "Title"
+                    },
+                    "testchoice": {
+                      "type": "boolean",
+                      "default": true
+                    }
+                  },
+                  "description": "fields"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {},
+  "parameters": {},
+  "responses": {},
+  "securityDefinitions": {
+    "oauth2_auth": {
+      "type": "oauth2",
+      "flow": "accessCode",
+      "authorizationUrl": "https://login.windows.net/common/oauth2/authorize",
+      "tokenUrl": "https://login.windows.net/common/oauth2/authorize",
+      "scopes": {
+        "https://graph.microsoft.com/.default": "https://graph.microsoft.com/.default"
+      }
+    }
+  },
+  "security": [
+    {
+      "oauth2_auth": [
+        "https://graph.microsoft.com/.default"
+      ]
+    }
+  ],
+  "tags": []
+}
